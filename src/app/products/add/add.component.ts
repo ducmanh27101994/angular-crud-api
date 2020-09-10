@@ -33,6 +33,19 @@ export class AddComponent implements OnInit {
     this.router.navigate(['products']);
   }
 
+  get name(){
+    return this.addForm.get('name');
+  }
+  get price(){
+    return this.addForm.get('price');
+  }
+  get color(){
+    return this.addForm.get('color');
+  }
+  get desc(){
+    return this.addForm.get('desc');
+  }
+
 
 
 }

@@ -43,5 +43,18 @@ export class EditComponent implements OnInit {
     this.router.navigate(['products']);
   }
 
+  get name(){
+    return this.editForm.get('name');
+  }
+  get price(){
+    return this.editForm.get('price');
+  }
+  get color(){
+    return this.editForm.get('color');
+  }
+  get desc(){
+    return this.editForm.get('desc');
+  }
+
 
 }
