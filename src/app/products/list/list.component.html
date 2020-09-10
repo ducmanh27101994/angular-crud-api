@@ -1,0 +1,32 @@
+<br><br>
+
+<a class="btn btn-info" routerLink="create" >Add Product</a>
+<br><br>
+<table class="table">
+<br>
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Color</th>
+    <th scope="col">Desc</th>
+    <th scope="col" colspan="3">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let list of listProduct, let i = index">
+    <th scope="row">{{i + 1}}</th>
+    <a [routerLink]="['/products/show',list.id]">
+    <td>{{list.name}}</td>
+    </a>
+    <td>{{list.price}}</td>
+    <td>{{list.color}}</td>
+    <td>{{list.desc}}</td>
+    <td><a [routerLink]="['/products', list.id]" class="btn btn-success">Update</a></td>
+    <td><a class="btn btn-info" [routerLink]="['/products/show',list.id]">Details</a></td>
+    <td><a (click)="deleteProduct(i)" class="btn btn-danger" >Delete</a> </td>
+  </tr>
+
+  </tbody>
+</table>
